@@ -500,6 +500,12 @@ span {
   letter-spacing: 0.04em;
   background-color: var(--accent-color);
   color: var(--first-background-color);
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 .subscribe-btn:hover,
