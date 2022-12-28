@@ -445,7 +445,7 @@
 
     <!-=======================MODAL===========================  -->
 
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-btn-close" data-modal-close>
           <svg class="icon-modal-close" width="8" height="8">
@@ -509,16 +509,18 @@
             ></textarea>
           </label>
 
+        
           <input
-            type="checkbox"
-            name="user-policy"
-            class="input-checkbox"
-            id="user-policy"
-          />
-          <label for="user-policy" class="label-input-checkbox">
-            I accept the terms and conditions of the
-            <a class="privacypolicy" href="">Privacy Policy</a>
-          </label>
+          type="checkbox"
+          name="user-policy"
+          class="input-checkbox visually-hidden"
+          id="user-policy"
+        />
+        <label for="user-policy" class="label-input-checkbox">
+          I accept the terms and conditions of the&nbsp;
+          <a class="privacypolicy" href="">Privacy Policy</a>
+        </label>
+        
           <button type="submit" class="modal-submit">Send</button>
         </form>
       </div>
