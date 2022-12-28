@@ -399,6 +399,10 @@ span {
   margin-bottom: 16px;
 }
 
+.footer-social-media {
+  margin-right: 80px;
+}
+
 .footer-social-media-list {
   display: flex;
   gap: 16px;
@@ -426,6 +430,89 @@ span {
 .footer-social-media-icon {
   width: 16px;
   height: 16px;
+  fill: var(--first-background-color);
+}
+
+/*========================================== FOOTER FORM================================ */
+
+
+.footer-form-title {
+  margin-bottom: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--first-background-color);
+}
+
+.wrapper-sub {
+  display: flex;
+}
+
+.footer-email-field {
+  width: 264px;
+  height: 40px;
+  margin-right: 24px;
+  padding-left: 16px;
+
+  color: var(--footer-text-color);
+  background-color: var(--secondary-text-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email-field:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.footer-email-field::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  min-width: 164px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  border: 0;
+  letter-spacing: 0.04em;
+  background-color: var(--accent-color);
+  color: var(--first-background-color);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--hover-button-color);
+}
+
+
+
+.subscribe-btn-icon {
+  width: 24px;
+  height: 24px;
+
   fill: var(--first-background-color);
 }
 
@@ -580,8 +667,6 @@ button:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  
 }
 .modal-btn-close {
   position: absolute;
@@ -617,7 +702,6 @@ button:focus {
 .modal-form {
   display: flex;
   flex-direction: column;
-
 }
 .modal-form-title {
   font-family: "Roboto";
@@ -645,9 +729,9 @@ button:focus {
   text-transform: none;
   margin-bottom: 4px;
 }
-.label-name, 
-.label-phone, 
-.label-email, 
+.label-name,
+.label-phone,
+.label-email,
 .label-textarea {
   margin-bottom: 8px;
 }
@@ -661,7 +745,7 @@ button:focus {
 
   transition-property: outline, border-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-user-field:focus {
@@ -686,12 +770,12 @@ button:focus {
 
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-user-comment {
   resize: none;
-  padding:8px 16px;
+  padding: 8px 16px;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -699,7 +783,7 @@ button:focus {
 
   transition-property: outline, border-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-user-comment:focus {
@@ -708,17 +792,14 @@ button:focus {
 }
 
 .textarea-user-comment::placeholder {
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.04em;
-color: rgba(117, 117, 117, 0.5);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
 }
-
-
-
 
 .label-input-checkbox {
   display: flex;
@@ -746,18 +827,18 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 .input-checkbox:checked + .label-input-checkbox::before {
-  background-color: var(--hover-button-color) ;
+  background-color: var(--hover-button-color);
   background-image: url(../images/vector.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-  .input-checkbox:focus + .label-input-checkbox::before {
-    background-color: var(--hover-button-color);
-    background-image: url(../images/vector.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.input-checkbox:focus + .label-input-checkbox::before {
+  background-color: var(--hover-button-color);
+  background-image: url(../images/vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .privacypolicy {
   font-family: "Roboto";
@@ -771,31 +852,30 @@ color: rgba(117, 117, 117, 0.5);
   color: var(--accent-color);
 }
 
-  .modal-submit {
-    margin: 0 auto;
-    min-width:169px;
-    
-    color: var(--first-background-color);
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    background: var(--accent-color);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+.modal-submit {
+  margin: 0 auto;
+  min-width: 169px;
+
+  color: var(--first-background-color);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--accent-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 4px;
-    padding: 16px 32px;
-    border: 0;
-  
-    transition-property: background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .modal-submit:hover,
-  .modal-submit:focus {
-    background-color: var(--hover-button-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
-  
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: 0;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+  background-color: var(--hover-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
